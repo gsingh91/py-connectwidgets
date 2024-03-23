@@ -162,3 +162,9 @@ cython_debug/
 #ignore all dot files except gitignore
 .*
 !.gitignore
+
+# removing README and package test files
+README_files/
+py_connectwidgets/package_test_files/
+README.html
+README.qmd 
