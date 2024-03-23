@@ -13,6 +13,7 @@ requests = "^2.31.0"
 itables = "^2.0.0"
 python-dotenv = "^1.0.1"
 jupyter = "^1.0.0"
+black = "^24.3.0"
 
 
 [build-system]
