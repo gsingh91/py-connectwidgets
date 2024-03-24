@@ -34,12 +34,16 @@ class Client:
 
 
 def connect(server, api_key):
+    if server == None:
+        raise ValueError("ERROR: CONNECT_SERVER must be defined")
+    if not api_key:
+        raise ValueError("ERROR: CONNECT_API_KEY must be defined")
     return Client(server, api_key)
 
 
 def rsc_table(content):
     if content.empty:
-        raise ValueError("data argument missing")
+        raise ValueError("ERROR: Content dataframe is empty")
 
     content["Owner"] = (pd.json_normalize(content["owner"]))["username"]
     content["Updated"] = pd.to_datetime(content["last_deployed_time"]).dt.date
